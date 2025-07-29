@@ -6,7 +6,7 @@
 -->
 <html>
 	<head>
-		<title>TEMYLOGUE</title>
+		<title>TEMILOGUE</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
@@ -20,7 +20,7 @@
 				<!-- Intro -->
 					<div id="intro">
 						<h1>welcome to<br />
-						Temylogue</h1>
+						Temilogue</h1>
 						<p>Where thoughts turn into stories, and silence finds its voice.</p> 
 						 <a href="https://html5up.net/license">Explore the Dialogue</a>
 						<ul class="actions">
@@ -30,15 +30,15 @@
 
 				<!-- Header -->
 					<header id="header">
-						<a href="index.html" class="logo">Temylogue</a>
+						<a href="index.html" class="logo">Temilogue</a>
 					</header>
 
 				<!-- Nav -->
 					<nav id="nav">
 						<ul class="links">
-							<li class="active"><a href="index.html">Welcome to TEMYLOGUE</a></li>
+							<li class="active"><a href="index.html">Home </a></li>
 							<li><a href="generic.html">About Me</a></li>
-							<li><a href="elements.html">Elements Reference</a></li>
+							<li><a href="elements.html">Reviews </a></li>
 						</ul>
 						<ul class="icons">
 							<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
@@ -65,7 +65,7 @@
 										Each entry is a conversation I started with myself… and left open for you to join.
 										
 										Because in a world of endless talking,
-										Temylogue is about listening — to life, to language, to the spaces in between..</p>
+										Temilogue is about listening — to life, to language, to the spaces in between..</p>
 								</header>
 								<a href="#" class="image main"><img src="images/pic01.jpg" alt="" /></a>
 								<ul class="actions special">
@@ -76,30 +76,40 @@
 						<!-- Posts -->
 							<section class="posts">
 								<article>
-									<header>
-										<span class="date">April 24, 2025</span>
-										<h2><a href="#">The Room Without Sound</a></h2>
-</header>
-<a href="#" class="image fit"><img src="images/pic02.jpg" alt="" /></a>
-<p>There’s a room I return to often. It has no doors, no clocks, no music.</p>
+									<article class="post featured">
+  <header>
+    <span class="date">April 24, 2025</span>
+    <h2><a href="#">The Room Without Sound</a></h2>
+  </header>
 
-<ul class="actions special">
-    <li><a href="#" class="button" onclick="toggleStory(event)">Full Story</a></li>
-</ul>
+  <a href="#" class="image fit"><img src="images/pic02.jpg" alt="" /></a>
+  <p>There’s a room I return to often. It has no doors, no clocks, no music.</p>
 
-<div id="fullStory" style="display: none; margin-top: 1em;">
+  <ul class="actions special">
+    <li><a href="#" class="button toggle-btn">Full Story</a></li>
+  </ul>
+
+  <div class="full-story" style="display: none; margin-top: 1em;">
     <p>There’s a room I return to often. It has no doors, no clocks, no music. Just me — and the echo of every thought I’ve ever left unfinished. In this room, silence is not absence — it’s presence. It breathes. It watches. It holds a mirror up to everything I pretend not to feel.</p>
     <p>At first, I ran from the quiet. I filled it with screens, with noise, with motion. But I’ve learned something — the things we run from usually carry the answers we’re chasing. The silence isn’t empty. It’s full. Full of memories, regrets, dreams too shy to speak out loud.</p>
     <p>When you sit in a room without sound, you begin to hear things that were always there: the weight of unsaid words. The pulse of your own aliveness. The whispered voice of truth — asking only to be noticed.</p>
     <p>This is not a post. It’s a pause. Welcome to the room.</p>
-</div>
+  </div>
+</article>
 
+ </body> 
 <script>
-function toggleStory(event) {
-    event.preventDefault(); // Stops the jump to top
-    var story = document.getElementById("fullStory");
-    story.style.display = story.style.display === "none" ? "block" : "none";
-}
+  document.addEventListener('DOMContentLoaded', function () {
+    const buttons = document.querySelectorAll('.toggle-btn');
+    buttons.forEach(button => {
+      button.addEventListener('click', function (event) {
+        event.preventDefault();
+        const story = this.closest('article').querySelector('.full-story');
+        story.style.display = story.style.display === 'none' ? 'block' : 'none';
+        this.textContent = story.style.display === 'block' ? 'Full Story' : 'Full Story';
+      });
+    });
+  });
 </script>
 
 									</ul>
@@ -202,66 +212,331 @@ function toggleStory(event) {
 										const letterStory = document.getElementById("letterStory");
 										letterStory.style.display = letterStory.style.display === "none" ? "block" : "none";
 									}
-									</script>									
-								</article>
-								<article>
-									<header>
-										<span class="date">April 20, 2025</span>
-										<h2><a href="#" onclick="event.preventDefault();">The Grief No One Talks About</a></h2>
-										<a href="#" class="image fit" onclick="event.preventDefault();">
-										  <img src="images/pic07.jpg" alt="" />
-										</a>
-										<p id="preview-1">
-  Nobody warned me that becoming would feel like a kind of death...
-  <button type="button" onclick="toggleStory(1)">Full Story</button>
-</p>
-<div id="full-1" style="display: none;">
-  <p>Nobody warned me that becoming would feel like a kind of death.</p>
-  <p>When we talk about grief, we talk about loss — of people, moments, certainty. But what about the version of you that you dreamed of in quiet confidence? The one you thought you’d grow into? The one you thought you’d have become by now?</p>
-  <p>There is a silent mourning in realizing your life looks nothing like the blueprint. That you’ve taken roads you never meant to walk, and left behind pieces of yourself that never got to fully bloom.</p>
-  <p>I used to think grief was a funeral. <br>But it can also be a Tuesday, staring at your reflection, thinking: <em>“This isn’t what I pictured.”</em></p>
-  <p>And yet, even in that grief, there is grace. Because you’re still here. Still unfolding. Still becoming — just not in the way you expected.</p>
-  <p>And maybe that’s the point.</p>
-</div>
-								</article>
-								<article>
-									<header>
-										<span class="date">April 19, 2025</span>
-										<h2><a href="#" onclick="event.preventDefault();">I Thought I Was Broken.</a></h2>
-										<a href="#" class="image fit" onclick="event.preventDefault();">
-										  <img src="images/pic07.jpg" alt="" />
-										</a>
-										<p>I used to look at my reflection and wonder why I couldn’t stay whole.</p>
-										
-										<ul class="actions special">
-										  <li><a href="#" class="button" onclick="event.preventDefault(); toggleStory('story7')">Full Story</a></li>
-										</ul>
-										
-										<div id="story7" style="display: none; margin-top: 1em;">
-										  <p>Why I kept falling apart in quiet ways. Why I loved too deeply, cried too easily, felt too much.</p>
-										  <p>I thought those cracks were signs of weakness. But now I know — they were <strong>growth lines</strong>. Breaking isn’t always destruction. Sometimes, it’s evolution.</p>
-										  <p>What felt like falling apart was just me shedding skin I’d outgrown.</p>
-										  <p>I wasn’t broken. I was becoming.</p>
-										  <p>If you’re in that place right now — raw, uncertain, unraveling — take heart. You’re not failing. You’re transforming.</p>
-										  <p>And one day, you’ll look back and thank the pain. Because it made space for the light to get in.</p>
-										</div>
-																			
-								</article>
-							</section>
+									</script>
 
-						<!-- Footer -->
-							<footer>
-								<div class="pagination">
-									<!--<a href="#" class="previous">Prev</a>-->
-									<a href="#" class="page active">1</a>
-									<a href="#" class="page">2</a>
-									<a href="#" class="page">3</a>
-									<span class="extra">&hellip;</span>
-									<a href="#" class="page">8</a>
-									<a href="#" class="page">9</a>
-									<a href="#" class="page">10</a>
-									<a href="#" class="next">Next</a>
-								</div>
+								</article>
+								<article>
+									<header>
+  <span class="date">April 20, 2025</span>
+  <h2>
+    <a href="#" onclick="event.preventDefault();">The Grief No One Talks About</a>
+  </h2>
+  <a href="#" class="image fit" onclick="event.preventDefault();">
+    <img src="images/pic07.jpg" alt="" />
+  </a>
+
+  <p id="preview-1">
+    </p> Nobody warned me </p>
+    <button type="button" onclick="toggleStory('full-1', this)">Full Story</button>
+  </p>
+
+  <div id="full-1" style="display: none;">
+    <p>Nobody warned me that becoming would feel like a kind of death.</p>
+    <p>When we talk about grief, we talk about loss — of people, moments, certainty. But what about the version of you that you dreamed of in quiet confidence? The one you thought you’d grow into? The one you thought you’d have become by now?</p>
+    <p>There is a silent mourning in realizing your life looks nothing like the blueprint. That you’ve taken roads you never meant to walk, and left behind pieces of yourself that never got to fully bloom.</p>
+    <p>I used to think grief was a funeral. <br>But it can also be a Tuesday, staring at your reflection, thinking: <em>“This isn’t what I pictured.”</em></p>
+    <p>And yet, even in that grief, there is grace. Because you’re still here. Still unfolding. Still becoming — just not in the way you expected.</p>
+    <p>And maybe that’s the point.</p>
+  </div>
+<ul class="actions special">
+        <li>
+          
+        </li>
+      </ul>
+    </header>
+  </article>
+								</article>
+								<article>
+									<header>
+  <span class="date">April 19, 2025</span>
+  <h2>
+    <a href="#" onclick="event.preventDefault();">I Thought I Was Broken.</a>
+  </h2>
+  <a href="#" class="image fit" onclick="event.preventDefault();">
+    <img src="images/pic07.jpg" alt="" />
+  </a>
+  <p>I used to look at my reflection and wonder why I couldn’t stay whole.</p>
+
+  <ul class="actions special">
+    <li>
+      <a href="#" class="button" onclick="event.preventDefault(); toggleStory('story7', this)">Full Story</a>
+    </li>
+  </ul>
+
+  <div id="story7" style="display: none; margin-top: 1em;">
+    <p>Why I kept falling apart in quiet ways. Why I loved too deeply, cried too easily, felt too much.</p>
+    <p>I thought those cracks were signs of weakness. But now I know — they were <strong>growth lines</strong>. Breaking isn’t always destruction. Sometimes, it’s evolution.</p>
+    <p>What felt like falling apart was just me shedding skin I’d outgrown.</p>
+    <p>I wasn’t broken. I was becoming.</p>
+    <p>If you’re in that place right now — raw, uncertain, unraveling — take heart. You’re not failing. You’re transforming.</p>
+    <p>And one day, you’ll look back and thank the pain. Because it made space for the light to get in.</p>
+  </div>
+</header>
+
+<script>
+  function toggleStory(id, button) {
+    const story = document.getElementById(id);
+    if (story.style.display === "none") {
+      story.style.display = "block";
+      button.textContent = "Full Story";
+    } else {
+      story.style.display = "none";
+      button.textContent = "Full Story";
+    }
+  }
+</script>
+ </header>
+  </article>
+								</article>
+								<article>
+									<header>
+<header>
+  <span class="date">june 29, 2025</span>
+  <h2>
+    <a href="#" onclick="event.preventDefault();">Rest Without Guilt</a>
+  </h2>
+  <a href="#" class="image fit" onclick="event.preventDefault();">
+    <img src="images/pic07.jpg" alt="" />
+  </a>
+
+  <p id="preview-1">
+    </p> You are not a machine.</p>
+    <button type="button" onclick="toggleStory('full-8', this)">Full Story</button>
+  </p>
+
+  <div id="full-8" style="display: none;">
+    <p>You weren’t made to run forever.</p>
+  <p>But somewhere along the line, the world convinced you that exhaustion equals excellence. That if you aren’t busy, you aren’t worthy. So now, you only stop when your body breaks — and even then, you feel ashamed.</p>
+  
+  <p>You've been taught to apologize for rest. For stillness. For silence. You feel guilty for choosing peace over performance, breath over burnout. But rest is not laziness. It's not weakness. It's not something you must earn.</p>
+  
+  <p>Even the sun disappears. Even oceans retreat. Even God — who needs nothing — chose to rest.</p>
+
+  <p>So why can’t you?</p>
+
+  <p>Rest is a return. To yourself. To your softness. To the quiet voice you keep drowning out with deadlines.</p>
+  <p>It’s where healing begins. Where your spirit exhales. Where your heart remembers that it matters too.</p>
+  
+  <p>So close the laptop. Turn off the noise. Say no — not because you’re weak, but because you’ve finally remembered: you are not a machine.</p>
+
+  <p>You are allowed to pause. Without guilt. Without apology.</p>
+
+  <p><strong>Rest without guilt.</strong> Because your value isn’t measured by your productivity. It’s written in your being — and being, sometimes, is enough.</p>
+  </div>
+<ul class="actions special">
+        <li>
+          
+        </li>
+      </ul>
+    </header>
+  </article>
+								</article>
+								<article>
+									<header>
+  <span class="date">june 29, 2025</span>
+  <h2>
+    <a href="#" onclick="event.preventDefault();">The Applause Is a Distraction</a>
+  </h2>
+  <a href="#" class="image fit" onclick="event.preventDefault();">
+    <img src="images/pic07.jpg" alt="" />
+  </a>
+  <p>Applause is sweet — deceptively so.</p>
+
+  <ul class="actions special">
+    <li>
+      <a href="#" class="button" onclick="event.preventDefault(); toggleStory('story8', this)">Full Story</a>
+    </li>
+  </ul>
+
+  <div id="story8" style="display: none; margin-top: 1em;">
+    <p>It comes fast and loud, echoing off the walls of your effort, your exhaustion, your desperate reaching. It makes you feel seen, validated, and maybe — if only for a moment — like you matter.</p>
+    <p>But applause is a shallow river. It touches the surface, never the soul.</p>
+    <p>They clap for the version of you that performs well.<br>
+    They clap for the version of you that smiles, delivers, survives.<br>
+    But the applause does not sit beside you on your sleepless nights.<br>
+    It does not ask how your soul is weathering the storm of always being “on.”</p>
+    <p>And yet, we chase it.<br>
+    We build lives around it.<br>
+    We shape our words, our dreams, our very selves to fit the mold that earns the loudest cheers.</p>
+    <p>But here’s the haunting truth:<br>
+    You can gain all the applause in the world and still feel completely unseen.</p>
+    <p>Because they aren’t clapping for your healing.<br>
+    They don’t cheer for your boundaries.<br>
+    They don’t celebrate when you cancel plans to protect your peace.</p>
+    <p>And so you keep running. Keep pushing. Keep achieving.<br>
+    But inside, you’re starving — not for sound, but for silence.<br>
+    Not for being noticed, but for being understood.<br>
+    Not for noise, but for peace.</p>
+    <p>Sometimes, silence is the loudest kind of affirmation.<br>
+    Sometimes, the absence of applause is where you finally meet yourself — raw, unfinished, and finally honest.</p>
+    <p>The applause is a distraction if it leads you away from who you really are.</p>
+    <p>So take the stage if you must — but know when to step off.<br>
+    And never forget: your soul is not a performance.</p>
+  </div>
+</header>
+</header>
+  </article>
+								</article>
+								<article>
+									<header>
+<header>
+  <span class="date">June 29, 2025</span>
+  <h2>
+    <a href="#" onclick="event.preventDefault();">The Place of Worship</a>
+  </h2>
+  <a href="#" class="image fit" onclick="event.preventDefault();">
+    <img src="images/pic07.jpg" alt="" />
+  </a>
+
+  <p id="preview-1">
+    </p>Sacred Presence, Silent Absence</p>
+    <button type="button" onclick="toggleStory('full-9', this)">Full Story</button>
+  </p>
+
+  <div id="full-9" style="display: none;">
+    <p>We enter mosques. We enter churches.  
+    We sit, we kneel, we recite.  
+    The rituals are beautiful —  
+    but sometimes, our hearts are somewhere else entirely.</p>
+
+    <p>Because you can sing the hymns.  
+    You can recite the verses.  
+    You can even raise your hands in prayer —  
+    and still feel hollow inside.</p>
+
+    <p>We often confuse presence with surrender.  
+    But God is not measuring your footsteps into the building.  
+    He’s watching what you brought with you —  
+    your grief, your guilt, your gratitude, your honesty.</p>
+
+    <p>Real worship isn't in the posture of the body,  
+    but in the bending of the ego,  
+    the breaking of pride,  
+    the whisper that says, “I need You, still.”</p>
+
+    <p>So the question remains —  
+    <strong>Have I entered the house of worship,  
+    but locked the door to my own heart?</strong></p>
+  </div>
+<ul class="actions special">
+        <li>
+          
+        </li>
+      </ul>
+    </header>
+  </article>
+  </header>
+  </article>
+								</article>
+								<article>
+									<header>
+<header>
+  <span class="date">June 29, 2025</span>
+  <h2>
+    <a href="#" onclick="event.preventDefault();">All Men Have Tongues</a>
+  </h2>
+  <a href="#" class="image fit" onclick="event.preventDefault();">
+    <img src="images/pic07.jpg" alt="" />
+  </a>
+
+  <p id="preview-1">
+    </p>And They’re Sharpening Them</p>
+    <button type="button" onclick="toggleStory('toungue-9', this)">Full Story</button>
+  </p>
+
+  <div id="toungue-9" style="display: none;">
+     <p>There is no such thing as neutral speech.</p>
+    <p>Everyone is sharpening their tongue — whether they know it or not.  
+    Some sharpen it with books and wisdom.  
+    Others sharpen it with hate, with envy, with shallow opinions turned loud.</p>
+
+    <p>In a world of many voices, we must ask:  
+    <strong>What is your tongue trained to do?</strong>  
+    Heal? Or humiliate?</p>
+
+    <p>Because every conversation is a choice.  
+    To uplift or to unravel.  
+    To pour light or pour fuel on someone else’s fire.</p>
+
+    <p>We’re all being listened to.  
+    Even in silence, even in sarcasm, even in quick online comments.  
+    Someone hears. Someone carries it.  
+    Sometimes forever.</p>
+
+    <p>And while your words may feel temporary,  
+    the shame, the damage, the insecurity they plant —  
+    may take years to undo.</p>
+
+    <p><strong>So speak gently.</strong>  
+    Because everyone has a tongue.  
+    But not everyone has learned when to keep it still.</p>
+  </div>
+<ul class="actions special">
+        <li>
+          
+        </li>
+      </ul>
+    </header>
+  </article>
+
+<script>
+  function toggleStory(id, button) {
+    const story = document.getElementById(id);
+    if (story.style.display === "none") {
+      story.style.display = "block";
+      button.textContent = "Full Story";
+    } else {
+      story.style.display = "none";
+      button.textContent = "Full Story";
+    }
+  }
+</script>
+
+</section>
+
+<!-- Footer -->
+<footer>
+  <div class="pagination" id="pagination">
+    <a href="#" class="page active" onclick="goToPage(1)">1</a>
+    <a href="#" class="page" onclick="goToPage(2)">2</a>
+    <a href="#" class="page" onclick="goToPage(3)">3</a>
+    <span class="extra">&hellip;</span>
+    <a href="#" class="page" onclick="goToPage(8)">8</a>
+    <a href="#" class="page" onclick="goToPage(9)">9</a>
+    <a href="#" class="page" onclick="goToPage(10)">10</a>
+    <a href="#" class="next" onclick="nextPage()">Next</a>
+  </div>
+</footer>
+
+<script>
+  let currentPage = 1;
+  const totalPages = 10; // adjust as needed
+
+  function goToPage(pageNumber) {
+    if (pageNumber < 1 || pageNumber > totalPages) return;
+    currentPage = pageNumber;
+
+    // Update active page styling
+    const pageLinks = document.querySelectorAll('.pagination .page');
+    pageLinks.forEach(link => link.classList.remove('active'));
+    pageLinks.forEach(link => {
+      if (parseInt(link.textContent) === currentPage) {
+        link.classList.add('active');
+      }
+    });
+
+    // Simulate loading content (optional)
+    console.log("Loading content for page " + currentPage);
+
+    // TODO: load actual page content dynamically (AJAX or pagination logic)
+  }
+
+  function nextPage() {
+    if (currentPage < totalPages) {
+      goToPage(currentPage + 1);
+    }
+  }
+</script>
 							</footer>
 
 					</div>
@@ -301,7 +576,7 @@ function toggleStory(event) {
 							</section>
 							<section>
 								<h3>Email</h3>
-								<p><a href="#">info@Temylogue.com</a></p>
+								<p><a href="#">info@Temilogue.com</a></p>
 							</section>
 							<section>
 								<h3>Social</h3>
@@ -317,7 +592,7 @@ function toggleStory(event) {
 
 				<!-- Copyright -->
 					<div id="copyright">
-						<ul><li>&copy; It’s</li><li>Temy: <a href="https://Temylogue.net">Temylogue</a></li></ul>
+						<ul><li>&copy; It’s</li><li>Temi: <a href="https://Temilogue.net">Temilogue</a></li></ul>
 					</div>
 
 			</div>
